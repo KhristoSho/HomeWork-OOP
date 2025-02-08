@@ -49,37 +49,37 @@ class Student:
 
     def __lt__(self, other):
         if isinstance(self, Student) and isinstance(other, Student):
-            return self.__average_grade < other.__average_grade
+            return self.__average_grade() < other.__average_grade()
         else:
             return "Ошибка"
 
     def __le__(self, other):
         if isinstance(self, Student) and isinstance(other, Student):
-            return self.__average_grade <= other.__average_grade
+            return self.__average_grade() <= other.__average_grade()
         else:
             return "Ошибка"
 
     def __eq__(self, other):
         if isinstance(self, Student) and isinstance(other, Student):
-            return self.__average_grade == other.__average_grade
+            return self.__average_grade() == other.__average_grade()
         else:
             return "Ошибка"
 
     def __ne__(self, other):
         if isinstance(self, Student) and isinstance(other, Student):
-            return self.__average_grade != other.__average_grade
+            return self.__average_grade() != other.__average_grade()
         else:
             return "Ошибка"
 
     def __gt__(self, other):
         if isinstance(self, Student) and isinstance(other, Student):
-            return self.__average_grade > other.__average_grade
+            return self.__average_grade() > other.__average_grade()
         else:
             return "Ошибка"
 
     def __ge__(self, other):
         if isinstance(self, Student) and isinstance(other, Student):
-            return self.__average_grade >= other.__average_grade
+            return self.__average_grade() >= other.__average_grade()
         else:
             return "Ошибка"
 
@@ -118,37 +118,37 @@ class Lecturer(Mentor):
 
     def __lt__(self, other):
         if isinstance(self, Lecturer) and isinstance(other, Lecturer):
-            return self.__average_grade < other.__average_grade
+            return self.__average_grade() < other.__average_grade()
         else:
             return "Ошибка"
 
     def __le__(self, other):
         if isinstance(self, Lecturer) and isinstance(other, Lecturer):
-            return self.__average_grade <= other.__average_grade
+            return self.__average_grade() <= other.__average_grade()
         else:
             return "Ошибка"
 
     def __eq__(self, other):
         if isinstance(self, Lecturer) and isinstance(other, Lecturer):
-            return self.__average_grade == other.__average_grade
+            return self.__average_grade() == other.__average_grade()
         else:
             return "Ошибка"
 
     def __ne__(self, other):
         if isinstance(self, Lecturer) and isinstance(other, Lecturer):
-            return self.__average_grade != other.__average_grade
+            return self.__average_grade() != other.__average_grade()
         else:
             return "Ошибка"
 
     def __gt__(self, other):
         if isinstance(self, Lecturer) and isinstance(other, Lecturer):
-            return self.__average_grade > other.__average_grade
+            return self.__average_grade() > other.__average_grade()
         else:
             return "Ошибка"
 
     def __ge__(self, other):
         if isinstance(self, Lecturer) and isinstance(other, Lecturer):
-            return self.__average_grade >= other.__average_grade
+            return self.__average_grade() >= other.__average_grade()
         else:
             return "Ошибка"
 
@@ -236,10 +236,18 @@ print(reviewer1)
 print()
 print(reviewer2)
 print()
+print("Средний балл студентов по Основам программирования Python")
 print(average_grade("Основы программирования Python", student1, student2))
+print("Средний балл студентов по Основам SQL")
 print(average_grade("Основы SQL", student1, student2))
 print()
+print("Средняя оценка лекторов по Основам программирования Python")
 print(average_grade("Основы программирования Python", lecturer1, lecturer2))
+print("Средняя оценка лекторов по Основам программирования Python")
 print(average_grade("Основы SQL", lecturer1, lecturer2))
 print()
 print(average_grade("Основы программирования Python", lecturer1, student1))
+print()
+print("Средний балл у student1 и student2 одинаковые?", student1 == student2)
+print("Средняя оценка у lecturer1 больше, чем lecturer2 ?", lecturer1 > lecturer2)
+print("Средняя оценка у lecturer2 больше, чем lecturer1 ?", lecturer2 > lecturer1)
